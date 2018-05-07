@@ -1,0 +1,75 @@
+Get Posts:
+=========
+me/feed?
+
+
+Response:
+==========
+{
+  "data": [
+    {
+      "created_time": "2018-05-02T07:42:16+0000",
+      "message": "Test",
+      "id": "1495445773897742_1497410013701318"
+    },
+    {
+      "created_time": "2018-04-30T09:53:17+0000",
+      "message": "New test message",
+      "id": "1495445773897742_1495570227218630"
+    },
+    {
+      "created_time": "2018-04-30T06:57:46+0000",
+      "message": "First auto post",
+      "id": "1495445773897742_1495460323896287"
+    },
+    {
+      "created_time": "2018-04-30T06:49:57+0000",
+      "message": "Hello :D",
+      "id": "1495445773897742_1495450687230584"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5VXhORGsxTkRRMU56Y3pPRGszTnpReU9pMHlOekEzTlRZAMU9ETXhPVFExTURRM016TXhEd3hoY0dsZAmMzUnZAjbmxmYVdRUElURTBPVFUwTkRVM056TTRPVGMzTkRKZAk1UUTVOelF4TURBeE16Y3dNVE14T0E4RWRHbHRaUVphNld2WUFRPT0ZD",
+      "after": "Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5VXhORGsxTkRRMU56Y3pPRGszTnpReU9pMDVNVEEzT0RRM05EWXlOelU0TVRreE56YzNEd3hoY0dsZAmMzUnZAjbmxmYVdRUElURTBPVFUwTkRVM056TTRPVGMzTkRKZAk1UUTVOVFExTURZANE56SXpNRFU0TkE4RWRHbHRaUVphNXJ5VkFRPT0ZD"
+    }
+  }
+}
+
+
+Get Comments:
+==============
+1495445773897742_1497410013701318/comments?
+
+Response:
+=========
+{
+  "data": [
+    {
+      "created_time": "2018-05-02T07:42:47+0000",
+      "from": {
+        "name": "Cleo Bot",
+        "id": "1495445773897742"
+      },
+      "message": "TestCommnet",
+      "id": "1497410013701318_1497410250367961"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "WTI5dGJXVnVkRjlqZAFhKemIzSTZANVFE1TnpReE1ESTFNRE0yTnprMk1Ub3hOVEkxTWpRMk9UWTQZD",
+      "after": "WTI5dGJXVnVkRjlqZAFhKemIzSTZANVFE1TnpReE1ESTFNRE0yTnprMk1Ub3hOVEkxTWpRMk9UWTQZD"
+    }
+  }
+}
+
+
+Add Comment:
+=============
+1495445773897742_1497410013701318/comments?
+
+Response:
+=========
+{
+  "id": "1497410013701318_1501260666649586"
+}

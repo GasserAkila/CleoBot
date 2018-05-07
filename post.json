@@ -1,0 +1,6 @@
+{"entry": [{"changes": [{"field": "feed", "value": {"item": "like", "verb": "add"}}], "id": "187172868730369", "time": 1525712188}], "object": "page"}
+
+{"entry": [{"changes": [{"field": "feed", "value": {"from": {"id": "10156461771591392", "name": "Gasser Akila"}, "item": "post", "post_id": "187172868730369_204451090335880", "verb": "add", "created_time": 1525712195, "is_hidden": false, "message": "Test tany"}}], "id": "187172868730369", "time": 1525712199}], "object": "page"}
+
+{"entry": [{"changes": [{"field": "feed", "value": {"from": {"id": "187172868730369", "name": "MyBot"}, "item": "comment", "comment_id": "204451090335880_204451117002544", "post_id": "187172868730369_204451090335880", "verb": "add", "parent_id": "187172868730369_204451090335880", "created_time": 1525712203, "post": {"type": "status", "updated_time": "2018-05-07T16:56:43+0000", "promotion_status": "ineligible", "permalink_url": "https://www.facebook.com/permalink.php?story_fbid=204451090335880&id=187172868730369", "id": "187172868730369_204451090335880", "status_type": "wall_post", "is_published": true}, "message": "Hello Gasser Akila. Thanks for your posts."}}], "id": "187172868730369", "time": 1525712207}], "object": "page"}
+
