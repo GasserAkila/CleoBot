@@ -1,14 +1,29 @@
 from flask import Flask
 from flask import request
 from flask import json
+from wit import Wit
 import requests
+import logging
 import json
-
+import timeit
+import threading
 
 PAGE_ACCESS_TOKEN = 'EAAZAf7sCMUFYBAB5bqRBRhwwsRwqVCsnGMqYDB64Tjc5SXUjPJaSnIPWWdlzaFTAlKWCu3ZBSdnLRvxzXPfoBl5KL29t9BAAxtL6yFZCUvO8OQbZAsyLCAD0w4GsyZC69vmmZCAelXnGiEOGZByZCZCeZCXZA9hxICAS0E0AAiQ1HnLKwZDZD'
 auth = {'access_token': PAGE_ACCESS_TOKEN}
 M_URL = 'https://graph.facebook.com/v2.6/me/messages'
 C_URL = 'https://graph.facebook.com/v2.6/'
+
+
+def WitTest(post, owner):
+    token = '7F63TXDBHOOOTQZ52MM5PALSEWPMXA6F'
+    wit_client = Wit(token)
+    wit_client.logger.setLevel(logging.DEBUG)
+    print("Hello1")
+    resp = wit_client.message(post)
+
+    print("Hello2")
+    return ('Yay, got Wit.ai response: ' + str(resp))
+
 
 
 def handleMessage(data):
@@ -31,12 +46,16 @@ def handleMessage(data):
 def handleComment(data):
     fb_username = data['entry'][0]['changes'][0]['value']['from']['name']
     fb_postid = data['entry'][0]['changes'][0]['value']['post_id']
-    msg = "Hello " + fb_username + ". Thanks for your posts."
+    fb_post = data['entry'][0]['changes'][0]['value']['message']
+    # print ("I'm here")
+    resp = WitTest(fb_post, fb_username)
+    msg = "Hello " + fb_username + ". Thanks for your posts. ya 7amoksha"
     cURL = C_URL + fb_postid + "/comments"
     payload = {
         'message': msg
     }
     r = requests.post(cURL, params=auth, json=payload)
+    # print ("I'm there")
     return
 
 
@@ -56,10 +75,10 @@ def webhook():
     #convert json response to dict
     in_data = request.get_json()
 
-    f = open("post.json","a")
-    f.write(json.dumps(in_data))
-    f.write("\n\n")
-    f.close()
+    # f = open("post.json","a")
+    # f.write(json.dumps(in_data))
+    # f.write("\n\n")
+    # f.close()
 
     #Messanger
     try:
@@ -72,7 +91,18 @@ def webhook():
     #Post
     try:
         if in_data['entry'][0]['changes'][0]['field'] == "feed" and in_data['entry'][0]['changes'][0]['value']['item'] == "post":
-            handleComment(in_data)
+
+            start = timeit.default_timer()
+
+            wit_thread = threading.Thread(target=handleComment, args=[in_data])
+            # wit_thread.join()
+            wit_thread.start()
+
+            stop = timeit.default_timer()
+
+            print (stop - start)
+
+
             return "Ok"
     except KeyError:
         pass
