@@ -7,6 +7,7 @@ import logging
 import json
 import timeit
 import threading
+import pandas as pd
 
 PAGE_ACCESS_TOKEN = 'EAAZAf7sCMUFYBAB5bqRBRhwwsRwqVCsnGMqYDB64Tjc5SXUjPJaSnIPWWdlzaFTAlKWCu3ZBSdnLRvxzXPfoBl5KL29t9BAAxtL6yFZCUvO8OQbZAsyLCAD0w4GsyZC69vmmZCAelXnGiEOGZByZCZCeZCXZA9hxICAS0E0AAiQ1HnLKwZDZD'
 auth = {'access_token': PAGE_ACCESS_TOKEN}
@@ -14,15 +15,35 @@ M_URL = 'https://graph.facebook.com/v2.6/me/messages'
 C_URL = 'https://graph.facebook.com/v2.6/'
 
 
+def generateResonse(response,owner):
+
+    df = pd.read_csv('responses.csv',dtype=str)
+
+    entities = response['entities']
+    for entity in entities:
+        print (entity)
+        if any(df.Intent == entity):
+            print ("hey")
+            comment = list(df[df['Intent'] == entity]['Response'])[0]
+
+    # print(df.head())
+
+    print(comment)
+    return comment;
+
 def WitTest(post, owner):
     token = '7F63TXDBHOOOTQZ52MM5PALSEWPMXA6F'
     wit_client = Wit(token)
     wit_client.logger.setLevel(logging.DEBUG)
     print("Hello1")
+
     resp = wit_client.message(post)
 
     print("Hello2")
-    return ('Yay, got Wit.ai response: ' + str(resp))
+    comment = generateResonse(resp, owner)
+    print("Hello3")
+
+    return comment
 
 
 
@@ -48,8 +69,9 @@ def handleComment(data):
     fb_postid = data['entry'][0]['changes'][0]['value']['post_id']
     fb_post = data['entry'][0]['changes'][0]['value']['message']
     # print ("I'm here")
-    resp = WitTest(fb_post, fb_username)
-    msg = "Hello " + fb_username + ". Thanks for your posts. ya 7amoksha"
+    comment = WitTest(fb_post, fb_username)
+    msg = "Hello " + fb_username + ". " + comment
+    # msg = comment
     cURL = C_URL + fb_postid + "/comments"
     payload = {
         'message': msg
