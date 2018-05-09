@@ -15,5 +15,16 @@ Inquire,Inquiry,MI 40, MI 40 provides you with 2500 MB for your Internet usage |
 Inquire,Inquiry,MI 60, MI 60 provides you with 4000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٦٠ عدد ٤٠٠٠ ميجابيت لإستهلاك الانترنت
 Inquire,Inquiry,MI 80, MI 80 provides you with 6000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٨٠ عدد ٦٠٠٠ ميجابيت لإستهلاك الانترنت
 Inquire,Inquiry,MI 100, MI 100 provides you with 8000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ١٠٠ عدد ٨٠٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 250, MI 250 provides you with 20000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٢٥٠ عدد ٢٠٠٠٠ ميجابيت لإستهلاك الانترنت
+optin,Optin,MI 5, To subscribe in MI bundle 100 please dial *2000*5# | للإشتراك في باقة النت ٥ إطلب *2000*5#
+optin,Optin,MI 10, To subscribe in MI bundle 100 please dial *2000*10# | للإشتراك في باقة النت ١٠ إطلب *2000*10#
+optin,Optin,MI 20, To subscribe in MI bundle 100 please dial *2000*20# | للإشتراك في باقة النت ٢٠ إطلب *2000*20#
+optin,Optin,MI 30, To subscribe in MI bundle 100 please dial *2000*30# | للإشتراك في باقة النت ٣٠ إطلب *2000*30#
+optin,Optin,MI 40, To subscribe in MI bundle 100 please dial *2000*40# | للإشتراك في باقة النت ٤٠ إطلب *2000*40#
+optin,Optin,MI 60, To subscribe in MI bundle 250 please dial *2000*60# | للإشتراك في باقة النت ٦٠ إطلب *2000*60#
+optin,Optin,MI 80, To subscribe in MI bundle 100 please dial *2000*80# | للإشتراك في باقة النت ٨٠ إطلب *2000*80#
 optin,Optin,MI 100, To subscribe in MI bundle 100 please dial *2000*100# | للإشتراك في باقة النت ١٠٠ إطلب *2000*100#
-optin,Optin,MI 250, To subscribe in MI bundle 250 please dial *2000*100# | للإشتراك في باقة النت ١٠٠ إطلب *2000*100#
+optin,Optin,MI 250, To subscribe in MI bundle 100 please dial *2000*250# | للإشتراك في باقة النت ٢٥٠ إطلب *2000*250#
+complaint,complain,network,Sorry for your problem we will try to fix it and get back to asap|نأسف لهذه المشكلة و نعدك بحلها قريباً
+complaint,complain,Flex,Sorry for your problem we will try to fix it and get back to asap|نأسف لهذه المشكلة و نعدك بحلها قريباً
+goodbye,true,,Thanks for using Vodabot|شكراً لإستخدامك فودابوت

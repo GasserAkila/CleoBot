@@ -35,12 +35,12 @@ def generateResonse(response,owner, language):
                     print ("Intent", intent)
                 # continue
                 # products = df.loc[df['Intent'] == entity]]
-            if ((entity == "Tariffs" or entity == "product") and any(df.Product == entities[entity][0]['value'])):
+            if ((entity == "Tariffs" or entity == "product" or entity == "network") and any(df.Product == entities[entity][0]['value'])):
                     product = entities[entity][0]['value']
                     print ("Product", product)
 
         if (intent != ""):
-            if (intent == "greetings"):
+            if ((intent == "greetings") | (intent == "goodbye")):
                 comments = list(df[df['Intent'] == intent]['Response'])[0]
                 comments_splitted = comments.split('|')
                 print (comments)
@@ -65,7 +65,7 @@ def generateResonse(response,owner, language):
         if (language == 'en'):
             print("Thanks for you message, We will get back to you shortly :)")
         if (language == 'ar'):
-            print("Thanks for you message, We will get back to you shortly :)")
+            print("عفواً سيتم التواصل معك من خلال مندوب فودافون")
 
 
     print(comment)
