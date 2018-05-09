@@ -1,0 +1,26 @@
+Intent,Intent_Value,Product,Response
+greetings,true,,Hey! How can I help you?|صباح الخير
+Inquire,Inquiry,Flex,Flex is our best tariff|دى الباقات الجديدة وفيها خدمة الWhatsapp مجانا :باقات فليكس الجديدة  فليكس 20 بتنزلك 550 فليكس ب 20 جنيه للتحويل من الكود #020* فليكس 30 بتنزلك 1100 فليكس ب 30 جنيه للتحويل من الكود #030* فليكس 50 بتنزلك 2200 فليكس ب 50 جنيه للتحويل من الكود #050* فليكس 70 بتنزلك 3300 فليكس ب 70 جنيه للتحويل من الكود #070* فليكس 90 بتنزلك 4400 فليكس ب 90 جنيه للتحويل من الكود #090*"""
+Inquire,Inquiry,MI,MI is our best product|دى باقات اكستريم للموبايل انترنت الجديدة
+5 جنيه 150 ميجا
+10 جنيه 500 ميجا
+20 جنيه 1,100 ميجا
+30 جنيه 1,800 ميجا
+40 جنيه 2,500 ميجا
+60 جنيه 4,000 ميجا
+80 جنيه 6,000 ميجا
+100 جنيه 8,000 ميجا
+150 جنيه 12,000 ميجا
+250 جنيه 20,000 ميجا
+400 جنيه 40,000 ميجا
+ممكن الإشتراك من كود #2000*
+Inquire,Inquiry,Flex 20, Flex 20 is our best tariff
+Inquire,Inquiry,MI 20, MI 20 is our best product
+Inquire,Inquiry,Flex 30, Flex 30 is our best tariff
+Inquire,Inquiry,MI 30, MI 30 is our best product
+Inquire,Inquiry,Flex 50, Flex 50 is our best tariff
+Inquire,Inquiry,MI 50, MI 50 is our best product
+Inquire,Inquiry,Flex 70, Flex 70 is our best tariff
+Inquire,Inquiry,MI 70, MI 70 is our best product
+Inquire,Inquiry,Flex 90, Flex 90 is our best tariff
+Inquire,Inquiry,MI 90, MI 90 is our best product

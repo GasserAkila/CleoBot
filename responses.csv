@@ -1,15 +1,19 @@
 Intent,Intent_Value,Product,Response
-greetings,true,,Hey! How can I help you?|صباح الخير
-Inquire,Inquiry,Flex, Flex is our best tariff
-Inquire,Inquiry,MI, MI is our best product
-Inquire,Inquiry,Flex 20, Flex 20 is our best tariff
-Inquire,Inquiry,MI 20, MI 20 is our best product
-Inquire,Inquiry,Flex 30, Flex 30 is our best tariff
-Inquire,Inquiry,MI 30, MI 30 is our best product
-Inquire,Inquiry,Flex 50, Flex 50 is our best tariff
-Inquire,Inquiry,MI 50, MI 50 is our best product
-Inquire,Inquiry,Flex 70, Flex 70 is our best tariff
-Inquire,Inquiry,MI 70, MI 70 is our best product
-Inquire,Inquiry,Flex 90, Flex 90 is our best tariff
-Inquire,Inquiry,MI 90, MI 90 is our best product
-Inquire,Optin,Flex 20,
+greetings,true,,How can I help you?|أهلاً بيك ممكن أساعدك ازاي
+Inquire,Inquiry,Flex,Now for the first time you get to enjoy using Whatsapp for free until you reach the end of your bundle! Meaning you won’t have to waste a single unit on you whatsapp.Flex 20 for 550 flexes Flex 30 for 1100 flexes Flex 50 for 2200 flexes Flex 70 for 3300 flexes Flex 90 for 4400 flexes.|دى الباقات الجديدة وفيها خدمة الWhatsapp مجانا :باقات فليكس الجديدة  فليكس 20 بتنزلك 550 فليكس ب 20 جنيه للتحويل من الكود #020* فليكس 30 بتنزلك 1100 فليكس ب 30 جنيه للتحويل منالكود #030* فليكس 50 بتنزلك 2200 فليكس ب 50 جنيه للتحويل من الكود #050* فليكس 70 بتنزلك 3300 فليكس ب 70 جنيه للتحويل من الكود #070* فليكس 90 بتنزلك 4400 فليكس ب 90 جنيه للتحويل من الكود #090*
+Inquire,Inquiry,MI,Choose the Extreme internet bundle that suits you best. 150 MB for 5 LE 500 MB for 10 LE 1100 MB for 20 LE 1800 MB for 30 LE 2500 MB for 40 LE 4000 MB for 60 LE 6000 MB for 80 LE 8000 MB for 100 LE.|دى باقات اكستريم للموبايل انترنت الجديدة:  5 جنيه 150 ميجا 10 جنيه 500 ميجا 20 جنيه 1100 ميجا 30 جنيه 1800 ميجا 40 جنيه 2500 ميجا 60 جنيه 4000 ميجا 80 جنيه 6000 ميجا 100 جنيه 8000 ميجا ممكن الإشتراك من كود #2000*
+Inquire,Inquiry,Flex 20,Flex 20 provides you with 550 Flexes that you can use for minutes and megabytes.| يوفر لك نظام فليكس ٢٠ ٥٥٠ فليكس مكالمات لكل الشبكات و ميجابيتس
+Inquire,Inquiry,Flex 30,Flex 30 provides you with 1100 Flexes that you can use for minutes and megabytes.| يوفر لك نظام فليكس ٣٠ ١١٠٠ فليكس مكالمات لكل الشبكات و ميجابيتس
+Inquire,Inquiry,Flex 50,Flex 50 provides you with 2200 Flexes that you can use for minutes and megabytes.| يوفر لك نظام فليكس ٥٠ ٢٢٠٠ فليكس مكالمات لكل الشبكات و ميجابيتس
+Inquire,Inquiry,Flex 70,Flex 70 provides you with 3300 Flexes that you can use for minutes and megabytes.| يوفر لك نظام فليكس ٧٠ ٣٣٠٠ فليكس مكالمات لكل الشبكات و ميجابيتس
+Inquire,Inquiry,Flex 90,Flex 90 provides you with 4400 Flexes that you can use for minutes and megabytes.|يوفر لك نظام فليكس ٩٠ ٤٤٠٠ فليكس مكالمات لكل الشبكات و ميجابيتس
+Inquire,Inquiry,MI 5, MI 5 provides you with 150 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٥ عدد ١٥٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 10, MI 10 provides you with 500 MB for your Internet usage |يوفر لك نظام باقات الانترنت ١٠ عدد ٥٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 20, MI 20 provides you with 1100 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٢٠ عدد ١١٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 30, MI 30 provides you with 1800 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٣٠ عدد ١٨٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 40, MI 40 provides you with 2500 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٤٠ عدد ٢٥٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 60, MI 60 provides you with 4000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٦٠ عدد ٤٠٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 80, MI 80 provides you with 6000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ٨٠ عدد ٦٠٠٠ ميجابيت لإستهلاك الانترنت
+Inquire,Inquiry,MI 100, MI 100 provides you with 8000 MB for your Internet usage |يوفر لك نظام باقات الانترنت ١٠٠ عدد ٨٠٠٠ ميجابيت لإستهلاك الانترنت
+optin,Optin,MI 100, To subscribe in MI bundle 100 please dial *2000*100# | للإشتراك في باقة النت ١٠٠ إطلب *2000*100#
+optin,Optin,MI 250, To subscribe in MI bundle 250 please dial *2000*100# | للإشتراك في باقة النت ١٠٠ إطلب *2000*100#

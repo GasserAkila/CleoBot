@@ -25,37 +25,49 @@ def generateResonse(response,owner, language):
     intent = ""
     product = ""
     # print (entities['Tariffs'])
-    for entity in entities:
-        print (entity)
-        if any(df.Intent == entity):
-            intent = entity
-            print ("Intent", intent)
-            # continue
-            # products = df.loc[df['Intent'] == entity]]
-        if ((entity == "Tariffs" or entity == "product") and any(df.Product == entities[entity][0]['value'])):
-                product = entities[entity][0]['value']
-                print ("Product", product)
+    try:
 
-    if (intent != ""):
-        if (intent == "greetings"):
-            comments = list(df[df['Intent'] == intent]['Response'])[0]
-            comments_splitted = comments.split('|')
-            if (language == 'en'):
-                comment = comments_splitted[0]
-            if (language == 'ar'):
-                comment = comments_splitted[1]
-        else:
-            # products =
-            comments = list(df.loc[(df['Intent'] == intent) & (df['Product'] == product)]['Response'])[0]
-            comments_splitted = comments.split('|')
-            if (language == 'en'):
-                comment = comments_splitted[0]
-            if (language == 'ar'):
-                comment = comments_splitted[1]
+        for entity in entities:
+            print (entity)
+            if any(df.Intent == entity):
+                if (intent == ""):
+                    intent = entity
+                    print ("Intent", intent)
+                # continue
+                # products = df.loc[df['Intent'] == entity]]
+            if ((entity == "Tariffs" or entity == "product") and any(df.Product == entities[entity][0]['value'])):
+                    product = entities[entity][0]['value']
+                    print ("Product", product)
+
+        if (intent != ""):
+            if (intent == "greetings"):
+                comments = list(df[df['Intent'] == intent]['Response'])[0]
+                comments_splitted = comments.split('|')
+                print (comments)
+                if (language == 'en'):
+                    comment = comments_splitted[0]
+                if (language == 'ar'):
+                    comment = comments_splitted[1]
+            else:
+                # products =
+                comments = list(df.loc[(df['Intent'] == intent) & (df['Product'] == product)]['Response'])[0]
+                comments_splitted = comments.split('|')
+                print (comments)
+                if (language == 'en'):
+                    comment = comments_splitted[0]
+                if (language == 'ar'):
+                    comment = comments_splitted[1]
 
         # print(df.head())
 
     # print("be5")
+    except:
+        if (language == 'en'):
+            print("Thanks for you message, We will get back to you shortly :)")
+        if (language == 'ar'):
+            print("Thanks for you message, We will get back to you shortly :)")
+
+
     print(comment)
     return comment;
 
@@ -103,7 +115,12 @@ def handleComment(data):
     fb_post = data['entry'][0]['changes'][0]['value']['message']
     # print ("I'm here")
     comment = WitTest(fb_post, fb_username)
-    msg = "Hello " + fb_username + ". " + comment
+    translator2 = Translator()
+    lang = translator2.detect(comment).lang
+    if (lang ==  'en'):
+        msg = "Hello " + fb_username + ". " + comment
+    if (lang ==  'ar'):
+        msg = "أهلاً " + fb_username + ". " + comment
     # msg = comment
     cURL = C_URL + fb_postid + "/comments"
     payload = {
@@ -138,9 +155,10 @@ def webhook():
     #Messanger
     try:
         if in_data['entry'][0]['messaging'][0]['message']['text']:
-            print ("message")
-            # wit_thread = threading.Thread(target=handleMessage, args=[in_data])
-            handleMessage(in_data)
+            # print ("message")
+            wit_thread = threading.Thread(target=handleMessage, args=[in_data])
+            wit_thread.start()
+            # handleMessage(in_data)
             return "Ok"
     except KeyError:
         pass
