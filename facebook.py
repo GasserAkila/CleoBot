@@ -9,6 +9,7 @@ import timeit
 import threading
 import pandas as pd
 from random import *
+from googletrans import Translator
 
 PAGE_ACCESS_TOKEN = 'EAAZAf7sCMUFYBAB5bqRBRhwwsRwqVCsnGMqYDB64Tjc5SXUjPJaSnIPWWdlzaFTAlKWCu3ZBSdnLRvxzXPfoBl5KL29t9BAAxtL6yFZCUvO8OQbZAsyLCAD0w4GsyZC69vmmZCAelXnGiEOGZByZCZCeZCXZA9hxICAS0E0AAiQ1HnLKwZDZD'
 auth = {'access_token': PAGE_ACCESS_TOKEN}
@@ -16,11 +17,13 @@ M_URL = 'https://graph.facebook.com/v2.6/me/messages'
 C_URL = 'https://graph.facebook.com/v2.6/'
 
 
-def generateResonse(response,owner):
+def generateResonse(response,owner, language):
 
     df = pd.read_csv('responses.csv')
-    comment = "We will get back to you shortly :)"
+    comment = "Thanks for you message, We will get back to you shortly :)"
     entities = response['entities']
+    intent = ""
+    product = ""
     # print (entities['Tariffs'])
     for entity in entities:
         print (entity)
@@ -33,16 +36,27 @@ def generateResonse(response,owner):
                 product = entities[entity][0]['value']
                 print ("Product", product)
 
-    if (intent == "greetings"):
-        comments = list(df[df['Intent'] == intent]['Response'])
-        comment = comments[randint(1,len(comments))-1]
-    else:
-        # products =
-        comments = list(df.loc[(df['Intent'] == intent) & (df['Product'] == product)]['Response'])
-        comment = comments[randint(1,len(comments))-1]
-    # print(df.head())
+    if (intent != ""):
+        if (intent == "greetings"):
+            comments = list(df[df['Intent'] == intent]['Response'])[0]
+            comments_splitted = comments.split('|')
+            if (language == 'en'):
+                comment = comments_splitted[0]
+            if (language == 'ar'):
+                comment = comments_splitted[1]
+        else:
+            # products =
+            comments = list(df.loc[(df['Intent'] == intent) & (df['Product'] == product)]['Response'])[0]
+            comments_splitted = comments.split('|')
+            if (language == 'en'):
+                comment = comments_splitted[0]
+            if (language == 'ar'):
+                comment = comments_splitted[1]
+
+        # print(df.head())
 
     # print("be5")
+    print(comment)
     return comment;
 
 def WitTest(post, owner):
@@ -52,10 +66,12 @@ def WitTest(post, owner):
     print("Hello1")
 
     resp = wit_client.message(post)
-
-    print("Hello2")
-    comment = generateResonse(resp, owner)
+    translator = Translator()
+    lang = translator.detect(post).lang
+    print("Hello2 this post is ", lang)
+    comment = generateResonse(resp, owner, lang)
     print("Hello3")
+    print(comment)
 
     return comment
 
@@ -65,8 +81,9 @@ def handleMessage(data):
     fb_senderid = data['entry'][0]['messaging'][0]['sender']['id']
     # fb_messageid = data['entry'][0]['id']
     fb_msg = data['entry'][0]['messaging'][0]['message']['text']
-    msg = WitTest(fb_msg, fb_senderid)
-    # msg = "Hello. Thanks for your message."
+    comment = WitTest(fb_msg, fb_senderid)
+    msg = comment
+    #msg = "Hello. Thanks for your message."
     payload = {
         'messaging_type': 'RESPONSE',
         'recipient': {
@@ -121,6 +138,8 @@ def webhook():
     #Messanger
     try:
         if in_data['entry'][0]['messaging'][0]['message']['text']:
+            print ("message")
+            # wit_thread = threading.Thread(target=handleMessage, args=[in_data])
             handleMessage(in_data)
             return "Ok"
     except KeyError:

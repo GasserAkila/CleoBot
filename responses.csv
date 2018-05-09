@@ -1,5 +1,5 @@
 Intent,Intent_Value,Product,Response
-greetings,true,,Hey! How can I help you?
+greetings,true,,Hey! How can I help you?|صباح الخير
 Inquire,Inquiry,Flex, Flex is our best tariff
 Inquire,Inquiry,MI, MI is our best product
 Inquire,Inquiry,Flex 20, Flex 20 is our best tariff
@@ -12,3 +12,4 @@ Inquire,Inquiry,Flex 70, Flex 70 is our best tariff
 Inquire,Inquiry,MI 70, MI 70 is our best product
 Inquire,Inquiry,Flex 90, Flex 90 is our best tariff
 Inquire,Inquiry,MI 90, MI 90 is our best product
+Inquire,Optin,Flex 20,
