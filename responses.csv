@@ -25,6 +25,7 @@ optin,Optin,MI 60, To subscribe in MI bundle 250 please dial *2000*60# | للإ�
 optin,Optin,MI 80, To subscribe in MI bundle 100 please dial *2000*80# | للإشتراك في باقة النت ٨٠ إطلب *2000*80#
 optin,Optin,MI 100, To subscribe in MI bundle 100 please dial *2000*100# | للإشتراك في باقة النت ١٠٠ إطلب *2000*100#
 optin,Optin,MI 250, To subscribe in MI bundle 100 please dial *2000*250# | للإشتراك في باقة النت ٢٥٠ إطلب *2000*250#
+flexrenewal,Optin,Flex, To renew flex bundle please dial *225#|لتجديد باقة فليكس اطلب *225#
 complaint,complain,network,Sorry for your problem we will try to fix it and get back to asap|نأسف لهذه المشكلة و نعدك بحلها قريباً
-complaint,complain,Flex,Sorry for your problem we will try to fix it and get back to asap|نأسف لهذه المشكلة و نعدك بحلها قريباً
+complaint,complain,Flex,Sorry for your problem we will try to fix it and get back to asap|نعتذر عن هذا الخطأ...مشكلتك بخصوص أي باقة فليكس ؟
 goodbye,true,,Thanks for using Vodabot|شكراً لإستخدامك فودابوت
